@@ -10,14 +10,14 @@ var BookSchema = new Schema({
 		default: Date.now
 	},
 	keywords: Array,
-	published:Boolean
+	published:Boolean,
 	author: {
 		type: Schema.ObjectId,
 		ref: 'User'
-	}
+	},
 	// Embedded sub-document
 	detail: {
-		modelNumber: Numver,
+		modelNumber: Number,
 		hardcover: Boolean,
 		reviews: Number,
 		rank: Number
